@@ -9,13 +9,8 @@ copyright:           "2019 Keith Collister"
 extra-source-files:
 - README.md
 
-# Metadata used when publishing your package
-synopsis:            Short description of your package
-# category:            Web
+synopsis:            Super simple program to pretty-print the AST of a Haskell 98 source file.
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Please see the README on Github at <https://github.com/hnefatl/hs-ast#readme>
 
 dependencies:

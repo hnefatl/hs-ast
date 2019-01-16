@@ -16,7 +16,13 @@ parseAndPrint file = do
             ParseFailed loc err -> putStrLn $ "Failed to parse " <> file <> ": " <> show loc <> "    " <> err
             ParseOk m -> pPrint m
 
+printUsage :: IO ()
+printUsage = putStrLn "Usage: hs-ast <path to source file> ..."
+
 main :: IO ()
 main = do
     args <- getArgs
-    forM_ args parseAndPrint
+    case args of
+        [] -> printUsage
+        ["--usage"] -> printUsage
+        _ -> forM_ args parseAndPrint
